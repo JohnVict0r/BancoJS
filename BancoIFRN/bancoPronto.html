@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>John & Eklênio</title>
+	<script type="text/javascript" src="banco.js"></script>
+</head>
+<body>
+
+<pre>
+<h1>BANCO em JAVASCRIPT</h1>
+</br>
+<h2>Cadastrar Conta</h2>
+<form name="cadastroContas"  >
+<table>
+<tr>
+<td> Nome: </td><td><input placeholder="aceita numeros e letras" name="nome" type="text"  id="nome" onkeyup="testeNome()"> </input></td>
+</tr>
+<tr>
+<td> CPF: </td><td><input placeholder="aceita apenas numeros" type="text" maxlength="11"  id="cpf" onkeyup="validarCPF()"> </input></td>
+</tr>
+<tr>
+<td> Data de Nascimento: </td><td><input placeholder="formato: dd/mm/aaaa" name="datnasc" maxlength="10" type="date"  id="datnasc" onkeyup="testeData()"> </input></td>
+</tr>
+<tr>
+<td> Telefone: </td><td><input maxlength="11" placeholder="formato: xxxxxxxxxxx" type="text" id="tel" onkeyup="testeTel()"> </input></td>
+</tr>
+<tr>
+<td> Conta: </td><td><input placeholder="aceita numeros" name="conta" type="text" id="conta" onkeyup="testeConta()"> </input></td>
+</tr>
+
+</table>
+                      <input name="cadastrar"  value="cadastrar" type="button" onclick="submeter();limparForm();" id="cadastrar"/> <input name="ListarContas" value="listar contas" type="button" onclick="listarContas()" /> 
+</pre>
+
+
+<table border="1" id="tabConts"> 
+</table>
+
+</form>
+<pre>
+Operação:
+
+Conta:  <input type="text" id="numConta" onkeyup="validarNumConta()"></input> valor: <input  type="text" id="valor" onkeyup = "validarValor()"></input> 
+
+        <input name="deposito" value="Deposito" type="button" onclick="depositar();listarContas();" id="deposito">  <input type = "button" value = "Sacar" onClick = "sacar();listarContas();"/>
+		
+		
+</pre>
+<h4>developers John Alves & Eklenio Soares  </h4>
+<h5>Turma: info 4M</h5>
+
+</body>
+</html>
